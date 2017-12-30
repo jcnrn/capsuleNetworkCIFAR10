@@ -4,17 +4,6 @@
 A Keras implementation of CapsNet in the paper:   
 [Sara Sabour, Nicholas Frosst, Geoffrey E Hinton. Dynamic Routing Between Capsules. NIPS 2017](https://arxiv.org/abs/1710.09829)   
 The current `average test error = 0.34%` and `best test error = 0.30%`.   
- 
-**Differences with the paper:**   
-- We use the learning rate decay with `decay factor = 0.9` and `step = 1 epoch`,    
-while the paper did not give the detailed parameters (or they didn't use it?).
-- We only report the test errors after `50 epochs` training.   
-In the paper, I suppose they trained for `1250 epochs` according to Figure A.1?
-Sounds crazy, maybe I misunderstood.
-- We use MSE (mean squared error) as the reconstruction loss and 
-the coefficient for the loss is `lam_recon=0.0005*784=0.392`.   
-This should be **equivalent** with using SSE (sum squared error) and `lam_recon=0.0005` as in the paper.
-
 
 **TODO**
 - Conduct experiments on other datasets. 
@@ -23,6 +12,7 @@ This should be **equivalent** with using SSE (sum squared error) and `lam_recon=
 **Contacts**
 - Your contributions to the repo are always welcome. 
 Open an issue or contact me with E-mail `guoxifeng1990@163.com` or WeChat `wenlong-guo`.
+Adapted for CIFAR-10 by Joseph Conran conran@adnumerant.com.
 
 
 ## Usage
@@ -143,27 +133,4 @@ independent during reconstruction.
 ![](result/manipulate-8.png)
 ![](result/manipulate-9.png)
 
-
-## Other Implementations
-
-- PyTorch:
-  - [XifengGuo/CapsNet-Pytorch](https://github.com/XifengGuo/CapsNet-Pytorch)
-  - [timomernick/pytorch-capsule](https://github.com/timomernick/pytorch-capsule)
-  - [gram-ai/capsule-networks](https://github.com/gram-ai/capsule-networks)
-  - [nishnik/CapsNet-PyTorch](https://github.com/nishnik/CapsNet-PyTorch.git)
-  - [leftthomas/CapsNet](https://github.com/leftthomas/CapsNet)
-  
-- TensorFlow:
-  - [naturomics/CapsNet-Tensorflow](https://github.com/naturomics/CapsNet-Tensorflow.git)   
-  I referred to some functions in this repository.
-  - [InnerPeace-Wu/CapsNet-tensorflow](https://github.com/InnerPeace-Wu/CapsNet-tensorflow)   
-  - [chrislybaer/capsules-tensorflow](https://github.com/chrislybaer/capsules-tensorflow)
-
-- MXNet:
-  - [AaronLeong/CapsNet_Mxnet](https://github.com/AaronLeong/CapsNet_Mxnet)
-  
-- Chainer:
-  - [soskek/dynamic_routing_between_capsules](https://github.com/soskek/dynamic_routing_between_capsules)
-
-- Matlab:
   - [yechengxi/LightCapsNet](https://github.com/yechengxi/LightCapsNet)
