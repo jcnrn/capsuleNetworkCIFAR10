@@ -2,18 +2,7 @@
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/XifengGuo/CapsNet-Keras/blob/master/LICENSE)
 
 A Keras implementation of CapsNet in the paper:   
-[Sara Sabour, Nicholas Frosst, Geoffrey E Hinton. Dynamic Routing Between Capsules. NIPS 2017](https://arxiv.org/abs/1710.09829)   
-The current `average test error = 0.34%` and `best test error = 0.30%`.   
-
-**TODO**
-- Conduct experiments on other datasets. 
-- Explore interesting characteristics of CapsuleNet.
-
-**Contacts**
-- Your contributions to the repo are always welcome. 
-Open an issue or contact me with E-mail `guoxifeng1990@163.com` or WeChat `wenlong-guo`.
-Adapted for CIFAR-10 by Joseph Conran conran@adnumerant.com.
-
+[Sara Sabour, Nicholas Frosst, Geoffrey E Hinton. Dynamic Routing Between Capsules. NIPS 2017](https://arxiv.org/abs/1710.09829)    
 
 ## Usage
 
@@ -31,7 +20,7 @@ git clone https://github.com/XifengGuo/CapsNet-Keras.git capsnet-keras
 cd capsnet-keras
 ```
 
-**Step 3. Train a CapsNet on MNIST**  
+**Step 3. Train a CapsNet on CIFAR10**  
 
 Training with default settings:
 ```
